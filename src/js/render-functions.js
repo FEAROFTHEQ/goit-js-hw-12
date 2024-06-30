@@ -1,5 +1,4 @@
 export const renderImages = (images, container)=>{
-    container.innerHTML = '';
     const markup =
     images.map(image=>
         `
@@ -22,7 +21,7 @@ export const renderImages = (images, container)=>{
     ).join("");
 
 
-container.insertAdjacentHTML("afterbegin", markup);
+container.insertAdjacentHTML("beforeend", markup);
 
 }
 
